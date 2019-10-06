@@ -8,12 +8,15 @@ namespace textAdventure
     {
         public String name;
         private bool[] exits = new bool[4] { false, false, false, false };
-        public List<WorldObject> present = new List<WorldObject>;
-        public Room( String n , bool[] neswexits )
+        public List<WorldObject> present = new List<WorldObject>();
+        public List<Room> leadsTo = new List<Room>(); 
+        public Room( String n , bool[] neswexits , List<Room> exitTo , List<WorldObject> objects )
         {
             //FOR EXITS, ARRAY INDEX 0 NORTH, 1 EAST, 2 SOUTH, 3 WEST
             exits = neswexits;
+            leadsTo = exitTo;
             name = n;
+            present = objects;
             
         }
         public bool isValidExit( String direction )

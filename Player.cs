@@ -18,6 +18,7 @@ namespace textAdventure
         public Random rnd = new Random();
         public String archetype;
         public String name;
+        public Room location;
 
         //inventory
         protected List<Item> inv;
