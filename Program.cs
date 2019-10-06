@@ -23,7 +23,7 @@ namespace textAdventure
 
             bool failedClass = false;
             narrator.NewLine( name + ", huh... Sure. That'll work.");
-            narrator.NewLine("And how do you fancy yourself? A Brute? A Wizard? A Bowman, perhaps?");
+            narrator.NewLine("And how do you fancy yourself? A Brute? A Clairvoyant? A Bowman, perhaps?");
             FailedClass:
                 if (failedClass)
                 {
@@ -48,6 +48,17 @@ namespace textAdventure
             narrator.NewLine("And so, the journey of " + me.name + " the " + me.archetype + " begins...");
             centerText(narrator.script);
             narrator.Clear();
+            me.location = new Room("Kitchen", new bool[] { true, false, false, false }, new List<Room>() , new List<WorldObject>());
+            bool quit = false;
+
+            //Game Loop//
+            while (quit = false )
+            {
+                input = Console.ReadLine();
+                //String instructions = Parser.Convert(input); needs to be implemented
+                //switch (instructions){}
+
+            }
         }
         private static void centerText(List<String> text)
         {

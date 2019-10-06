@@ -62,5 +62,3 @@ namespace textAdventure
         int solvesID = 0;
     }
 }
-
-
